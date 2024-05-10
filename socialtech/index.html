@@ -312,13 +312,23 @@
                 <section id="contact">
                     <h2 class="index-h2">CONTACT</h2>
                     <h3>お問い合わせ</h3>
-                    <form>
+                    <form id="form">
+                    <input type="text" name="honeypot" style="display: none">
+                    <!-- STATIC FORMSのアクセスキー -->
+                    <input type="hidden" name="accessKey" value="9c085c1d-fc3b-477c-83fd-ff029d491540">
+                    <!-- メールのタイトル -->
+                    <input type="hidden" name="subject" value="お問い合わせフォーム">
+                    <!-- 送信先のメールアドレスをvalueに設定する -->
+                    <input type="hidden" name="replyTo" value="">
+                    <!-- redirectToのURLは公開後ののURLへリンクする -->
+                    <input type="hidden" name="redirectTo" value="">
+                    
                         <div>
                             <div class="contact-heading">
                               <label class="contact-label">お名前<span class="contact-span">必須</span></label>
                             </div>
                             <div>
-                              <input type="text" name="name" placeholder="入力してください" class="contact-textbox">
+                              <input id="name" type="text" name="name" placeholder="入力してください" class="contact-textbox">
                             </div>
                           </div>
                           <div>
@@ -326,7 +336,7 @@
                               <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
                             </div>
                             <div>
-                              <input type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
+                              <input id="furigana" type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
                             </div>
                           </div>
                           <div>
@@ -334,7 +344,7 @@
                               <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
                             </div>
                             <div>
-                              <input type="text" name="email" placeholder="入力してください" class="contact-textbox">
+                              <input id="email" type="text" name="email" placeholder="入力してください" class="contact-textbox">
                             </div>
                           </div>
                           <div>
@@ -342,7 +352,7 @@
                               <label class="contact-label">電話番号</label>
                             </div>
                             <div>
-                              <input type="text" name="tel" placeholder="入力してください" class="contact-textbox">
+                              <input id="tel" type="text" name="tel" placeholder="入力してください" class="contact-textbox">
                             </div>
                           </div>
                           <div>
@@ -350,7 +360,7 @@
                               <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
                             </div>
                             <div>
-                              <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+                              <textarea id="message" class="contact-textarea" placeholder="入力してください" name="message"></textarea>
                             </div>
                           </div>
                           <div>
@@ -397,11 +407,11 @@
                                   お客様がご自身の個人情報を弊社に提供されるか否かは、お客様のご判断によりますが、もしご提供されない場合には、適切なサービスが提供できない場合がありますので予めご了承ください。
                                 </div>
                               </details>
-                              <input type="checkbox" name="agree">
+                              <input id="agree" type="checkbox" name="agree">
                               <span>個人情報の取り扱いについてご同意いただける場合は、チェックをしてください。</span>
                             </div>
                           </div>
-                          <input type="image" src="images/button-submit.png" alt="送信する">
+                          <input id="submit" type="image" src="images/button-submit.png" alt="送信する">
                     </form>
                 </section>
         </article>
